@@ -1,0 +1,133 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Moprion</title>
+    <link rel="stylesheet" type="text/css" href="morpionV2.css">
+    <link rel="stylesheet" type="text/css" href="inscriptionV2.css">
+</head>
+<body>
+
+<h1 style="text-align: center;">Participants du tour</h1>
+
+<div class="globale">
+
+<!-- block où la partie va se jouer -->
+<form id="GameStart">
+    <fieldset class="form-fieldPartie">
+    <legend class="legendaryPartie">Jeu de Morpion</legend>
+
+<div class="encapsule">
+    <div id="board">
+    <div class="cell" onclick="makeMove(0, 0)"></div>
+    <div class="cell" onclick="makeMove(0, 1)"></div>
+    <div class="cell" onclick="makeMove(0, 2)"></div>
+    <div class="cell" onclick="makeMove(1, 0)"></div>
+    <div class="cell" onclick="makeMove(1, 1)"></div>
+    <div class="cell" onclick="makeMove(1, 2)"></div>
+    <div class="cell" onclick="makeMove(2, 0)"></div>
+    <div class="cell" onclick="makeMove(2, 1)"></div>
+    <div class="cell" onclick="makeMove(2, 2)"></div>
+  </div>
+</div>
+</fieldset>
+</form>
+<!-- Block inscription des Joueurs------ -->
+
+<form id="myForm" style="margin-top: 50px; width: 40%;">
+
+    <fieldset class="form-fieldInscription">
+        <legend class="legendaryInscription">Inscription</legend>
+
+        <div class="ChampsInscriptions">
+                <!-- ------Saisie du 1 er joueur------------------------------ -->
+                <div>
+                    <label for="Joueur1">Nom du <span style="font-weight: 800; color: rgb(217, 238, 28); background-color: black; padding: 3px; border-radius: 3px;">Joueur 1</span></label>
+                    <span id="infoDeSaisieNomJoueur1" class="infoSaisie">info 💬: "caractères alphabetique uniquement".</span>
+                    <input placeholder="- à compléter..🖊️ -" type="text" id="Joueur1" name="Joueur1" pattern="[A-Za-z]+" required>
+                </div>
+                <!--Choix de l'Avatar du Joueur 1-->
+                <div id="divAvat1">
+                    <label for="Avatar1">Avatar:</label>
+                    <span id="infoAvatar1" class="infoSaisie">info 💬: "choisir un Avatar dans la liste déroulante".</span>
+                    <input placeholder="- Choisissez votre Avatar.. -" type="text" list="AvatarList1" id="Avatar1" name="Avatar1" required>
+                    <datalist id="AvatarList1">
+                        <option value="😡">
+                        <option value="💀">
+                        <option value="🤡">
+                        <option value="👽">
+                        <option value="👻">
+                        <option value="🤖">
+                        <option value="💩">
+                        <option value="😸">
+                        <option value="🙈">
+                        <option value="🧑">
+                        <option value="👨‍🦰">
+                        <option value="👱">
+                        <option value="👩‍🦰">
+                        <option value="👩">
+                        <option value="🙍">
+                        <option value="👮">
+                        <option value="👨‍👩‍👦‍👦">
+                    </datalist>
+                </div>
+                
+
+                <!-- -------Saisie du 2 eme Joueur----------------------------- -->
+                <div id="divJoueur2">
+                    <label for="Joueur2">Nom du <span style="font-weight: 800; color: rgb(69, 230, 216); background-color: black; padding: 3px; border-radius: 3px;">Joueur 2</span></label>
+                    <span id="infoDeSaisieNomJoueur2" class="infoSaisie">info 💬: "caractères alphanumériques uniquement".</span>
+                    <input placeholder="- à compléter.. -" type="text" id="Joueur2" name="Joueur2" pattern="[A-Za-z]+" required>
+                </div>
+                <!--Choix de l'Avatar du Joueur 2 -->
+                <div id="divAvat2">
+                    <label for="Avatar2">Avatar:</label>
+                    <span id="infoAvatar2" class="infoSaisie">info 💬: "choisir un Avatar dans la liste déroulante".</span>
+                    <input placeholder="- Choisissez votre Avatar.. -" type="text" list="AvatarList2" id="Avatar2" name="Avatar2" required>
+                    <datalist id="AvatarList2">
+                        <option value="😡">
+                        <option value="💀">
+                        <option value="🤡">
+                        <option value="👽">
+                        <option value="👻">
+                        <option value="🤖">
+                        <option value="💩">
+                        <option value="😸">
+                        <option value="🙈">
+                        <option value="🧑">
+                        <option value="👨‍🦰">
+                        <option value="👱">
+                        <option value="👩‍🦰">
+                        <option value="👩">
+                        <option value="🙍">
+                        <option value="👮">
+                        <option value="👨‍👩‍👦‍👦">
+                    </datalist>
+                </div>
+                
+
+
+
+                    <button id="savingJoueur" type="button" onclick="goToPlay()">Valider</button>
+        </div>
+    
+
+    </fieldset>
+</form>
+
+
+</div>
+  
+  <button id="reset" type="reset" onclick="resetBoard()">Nouveau Duel</button>
+
+
+  <script src="Participants.js"></script>
+  <script src="principalScriptInterface.js"></script>
+    
+</body>
+</html>
