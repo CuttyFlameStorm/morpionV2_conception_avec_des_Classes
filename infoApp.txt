@@ -1,0 +1,2 @@
+il s'agit d'ameliorer le code de l'application morpion , en repensant le projet 
+avec une approche de conception du projet par Classes.
